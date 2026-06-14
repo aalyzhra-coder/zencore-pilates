@@ -22,7 +22,7 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Routes akan ditambahkan di sini pada step berikutnya
+app.use('/api/auth', require('./routes/authRoutes'));
 
 app.use(notFound);
 app.use(errorHandler);
